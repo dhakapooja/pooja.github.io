@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 	<meta charset="utf-8">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163518725-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-163518725-1');
+	</script>
+
+	<script src="https://unpkg.com/thesemetrics"></script>
+
+	<title>Designing Conversation Flow Builder at Smartbeings | Suwardhan Ahirrao</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="UX Designer">
+	<meta name="author" content="Suwardhan Ahirrao">
+	<link rel="shortcut icon" type="image/png" href="images/logo.svg"/>
+
+	<meta property="og:title" content="Designing Conversation Flow Builder at Smartbeings">
+	<meta property="og:description" content="Suwardhan Ahirrao | UX Designer">
+	<meta property="og:image" content="https://suwardhan.com/images/smartbeings/social-media-cover.png">
+	<meta property="og:url" content="https://suwardhan.com/custom-dimensions-clarisights.html">
+
+	<meta name="twitter:title" content="Designing Conversation Flow Builder at Smartbeings">
+	<meta name="twitter:description" content="Suwardhan Ahirrao | UX Designer">
+	<meta name="twitter:image" content="https://suwardhan.com/images/smartbeings/social-media-cover.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+</head>
+
+
+<body>
+	<a href="index.html">
+		<img class="top-nav" src="images/logo.svg">
+	</a>
+
+	<img class="img-cover" src="images/smartbeings/cover.svg">
+
+	<div class="div-container">
+		<h1>Designing Conversation Flow Builder at Smartbeings</h1>
+		<p>SmartBeings Inc. is a Voice AI startup based in Silicon Valley. The company aims to bring the convenience of voice AI technologies to enterprises. I worked with Smartbeings team as a UX Design Consultant for more than a year from mid-2017 till late 2018.</p>
+		<p>One of the projects I was part of was to design a conversation flow builder: a platform enabling enterprises to build voice apps for their consumers. e.g. Dominoes wants its customers to order pizza by talking to an AI assistant.</p>
+		<p>Back then in 2018, Smartbeings was a midsize startup (~25 employees). Being the only design person in the team, I teamed up with Sharon Rasheed (Product Manager), Shreyas (Lead Developer) and Rajesh Shanmugam (CTO) to design the foundation of the Enterprise platform.</p>
+		<p>Being a large project, I will be focussing on the conversation flow-builder in this post. Will briefly discuss the structure of the conversation, it's building blocks and then move on to information architecture, the user story and finally, the user interface.</p>
+		<br><br>
+		<h2>The structure of a conversation</h2>
+		<p>Consider a conversation between a human (say Sam) and a machine (let's call her eM). eM is sitting idle, doing her machine things.</p>
+		<p>Just like a real human, to get eM's attention, Sam has to call eM in some way. This action is done using a <code>wake word</code>. Wake words are prevalent in consumer products (e.g. okay Google, Hey Siri)</p>
+		<p>eM is now listening. Next, Sam tells eM what she wants her to do. This can be anything, like setting an alarm, booking a cab or ordering pizza.</p>
+		<p>First, eM converts Sam's voice command to text. Then, for eM to understand what exactly Sam wants, she looks for <code>Intent</code> in her request. e.g. If Sam says "Set a reminder", the intent here is to add a reminder.</p>
+		<p>Now eM knows about Sam's intent to add a reminder. But there are still few things unclear about this intent, like what to remind (reminder name) and when to remind (reminder time). These are called <code>Intent Parameters</code>. Intent Parameters can be mandatory or optional (have defaults).</p>
+		<p>If eM is able to identify the intent but does not have mandatory parameters, eM asks Sam about those missing parameters. Once all the required parameters are in, eM processes the request.</p>
+		<p>To make sense of each intent, eM needs to scan through her knowledge base about what each intent parameter dictates. This knowledge base is called <code>Entities</code> e.g. 24 hours clock for time or days and months to map dates.</p>
+		<p>Once eM is ready with a response, she conveys it to Sam. She can say it with a voice, display it over a screen or convey it with any other communication medium she is capable of.</p>
+		<br><br>
+		<h2>Information Architecture</h2>			
+	</div>
+	
+	<img class="img-center" src="images/smartbeings/ia.png">
+
+	<div class="div-container">
+		<p>From above chart:</p>
+		<p><strong>Domain:</strong> Smartbeings serves multiple enterprise customers at once. Each enterprise customer is assigned one domain. Each domain has its own assistant name, enabling unique wake words.</p>
+		<p><strong>Intent:</strong> An intent represents the purpose of users' voice input. Companies need to add training phrases and intent parameters suitable for their use cases.</p>
+		<p><strong>Training Phrase (Utterance):</strong> The same intent can be conveyed in multiple ways. e.g <code>Book a cab to the airport</code> or <code>Find me a ride to the airport</code>. Linked to an intent, training phrases or utterances are different ways a user can phrase her requests.</p>
+		<p><strong>Intent Parameter:</strong> Intent parameters are values extracted from users' voice input to make sense of the request. e.g. Cab, ride, airport</p>
+		<p><strong>Entity:</strong> Each intent parameter is mapped to an entity. The entity is the type of information to be extracted from the user's input. e.g. the intent parameter airport is mapped to an entity <code>@airport</code> that stores a list of all airports across the world.</p>
+		<p><strong>Service:</strong> A service is any task a company (Enterprise Customers) fulfils using the assistant. e.g. Booking a cab, ordering food, changing light settings in a room, etc.</p>
+		<p><strong>Conversation flow</strong> A service is a group of one or multiple conversation flows. Conversation flow is a visual representation of the order in which the AI assistant will take in user input, process the request and respond.</p>
+		<br><br>
+		<h2>Conversation Flow Builder</h2>
+		<p>Building a conversation flow is like writing a script for the dialogue that may happen between a user and the assistant in a particular scenario. For a given dialogue, a conversation designer cannot predict one definite path.</p>
+		<p>The diagram below shows multiple paths in which a single end goal can be achieved - searching for flights.</p>
+	</div>
+	
+	<img class="img-wide" src="images/smartbeings/sample-flow.png">
+
+	<div class="div-container">
+		<p>However, the conversation designer can create checkpoints in the dialogue. Each checkpoint will help the system to map progress in the conversation and guide the user to the end goal.</p>
+		<br>
+		<h2>Nodes</h2>
+		<p>Nodes are the checkpoints in the conversation flow. Nodes can be categorised into three types:</p>
+		<ul>
+			<li><b>Input Node</b>: Information taken in by the assistant is defined in the input node. In most cases, it is the user's voice command, but it can also include other triggers like location, a specific sound, etc.</li>
+			<br>
+			<li><b>Output Node</b>: Information conveyed by the assistant is defined in the output node. Output can be textual, auditory or visual based on assistant capacity and use case.</li>
+			<br>
+			<li><b>Function Node</b>: Any activity to be performed other than taking in and conveying information is defined in the function node. e.g. calling an API, running a custom code block, branching, etc.</li>
+		</ul>
+		<br>
+		<h2>User Story</h2>
+		<p>As a conversation designer, I want to:</p>
+		<ul>
+			<li>Define how a conversation starts - by voice command (in most cases), but also location, external sounds, etc.</li>
+			<li>Connect that input to an intent</li>
+			<li>Mention different variations of the same (in case of voice command)</li>
+			<li>Link the input to the next checkpoint in the conversation (in some cases, the assistant can directly respond, or the input command may need some additional processing before a response)</li>
+			<li>Diverge the conversation into more than one path to accommodate for conditional responses</li>
+			<li>Make API calls at any step in the flow</li>
+			<li>Add a custom code block at any step in the flow</li>
+			<li>Define what and how the assistant responds</li>
+			<li>Test the conversation flow in parallel</li>
+		</ul>
+		<br>
+		<h2>The Interface</h2>
+		<p>The primary principle while designing the flow builder interface was to enable conversation designers to explore, design and test the flow in one single place; with minimum loss of context at any step.</p>
+		<p>The interface has a 3 column grid:</p>
+		<ul>
+			<li>Domain assets - nodes, intents, entities and code</li>
+			<li>The Flow chart</li>
+			<li>Node Configuration and Testing</li>
+		</ul>
+	</div>
+	
+	<img class="img-wide" src="images/smartbeings/interface.jpg">
+
+	<div class="div-container">
+		<br>
+		<h2>1. Domain Assets</h2>
+		<p>Domain assets include a repository of intents, entities and code-blocks relevant to a particular enterprise customer. Having them one-click away becomes handy while designing the flow.</p>
+		<br>
+	</div>
+
+	<img class="img-wide" src="images/smartbeings/domain-assets.jpg">
+
+	<div class="div-container">
+		<br>
+		<p>The modal layout enables the conversation designer to tweak intents, entities and code-blocks, without losing the context of the flow.</p>
+		<br>
+	</div>
+
+	<img class="img-wide" src="images/smartbeings/intent-modal.jpg">
+
+	<div class="div-container">
+		<br>
+		<p>Also, for friction-free onboarding, the interface has clear instructions and help content at every step.</p>
+		<p>These domain assets have a separate page for themselves too, in-case someone from the enterprise team does not have permission to build flows, but wants to update a particular intent, entity or a code-block.</p>
+		<br>
+		<h2>2. The Flow Chart</h2>
+		<p>The conversation flow chart extends vertically with flow trigger starting at the top. The conversation designer can attach subsequent nodes in the flow by drag and drop interaction.</p>
+		<br>
+	</div>
+
+	<img class="img-center" src="images/smartbeings/empty-state.jpg">
+
+	<div class="div-container">
+		<br>
+		<h3>Branching</h3>
+		<p>It's rare for a conversation flow to follow a single path. In many cases, more than one path has to be created to factor in multiple conditions. e.g. separate paths for <code>Book ride now</code> and <code>Schedule a ride</code> in the same booking flow.</p>
+		<p>Condition-based branching enables the conversation designer to diverge the flow into more than one path.</p>
+		<br>
+	</div>
+
+	<img class="img-center" src="images/smartbeings/branching.jpg">
+
+	<div class="div-container">
+		<p>Conversation designer can simply drag and drop the node on the same level to create a branch. She can then go on to add respective conditions in the branch node configuration panel on the right.</p>
+		<br>
+		<h2>3. Node Configuration and Testing</h2>
+		<p>On dropping the nodes in the flow chart, the user can configure node properties in the column on the right.</p>
+		<p>Some properties are common to every node (e.g. go-to, add branch), while others are specific to node-type (link intent for input node). Also, each node type is colour-coded for visual reference.</p>
+		<br>
+	</div>
+
+	<img class="img-center" src="images/smartbeings/node-configuration.jpg">
+
+	<div class="div-container">
+		<br>
+		<h3>Response</h3>
+		<p>The assistant response is defined in the output node. The type of response varies from a case-to-case basis and also depends on the assistant hardware capabilities. e.g. an assistant device may have voice output, but no display; or a display with just text rendering and no image rendering, etc.</p>
+		<p>The conversation designer can define output in the form of voice, text, list, image, video or a web-page. Depending on device hardware capabilities, the assistant can automatically choose a suitable format(s) to convey information.</p>
+		<br>
+	</div>
+
+	<img class="img-wide" src="images/smartbeings/response-configuration.jpg">
+
+	<div class="div-container">
+		<br>
+		<h3>Flow Testing</h3>
+		<p>It's a difficult task to perfect a conversation flow in one go. The conversation designer has to carry out back and forth testing to ensure a smooth end experience.</p>
+		<p>In parallel to adding and configuring nodes, the conversation designer can run tests in the same UI. If no node is active/selected, the right sidebar switches to test mode allowing her to test the flow.</p>
+		<br>
+	</div>
+
+	<img class="img-wide" src="images/smartbeings/testing.jpg">
+
+	<div class="div-container">
+		<h2>Handling Errors</h2>
+		<p>Clear visibility of warnings and errors is imperative for a conversation designer to rectify any mistakes while designing the flow. The error messaging is categorised into 2 types:</p>
+		<ul>
+			<li><b>Node error</b>: Error pertaining to a particular node configuration is a node error. These errors are displayed on the respective node card in the flow.</li>
+			<br>
+			<li><b>Flow error</b>: Error pertaining to the flow as a whole is a flow error. This error status stays on the header adjacent the <code>Deploy</code> button. If everything is fine, it just shows a green check icon.</li>
+		</ul>
+		<br>
+	</div>
+
+	<img class="img-center" src="images/smartbeings/error.jpg">
+
+	<div class="div-container">
+		<h2>Testing and Development</h2>
+		<p>The company had a separate team to take feedback and communicate upcoming features to its enterprise customers.</p>
+		<p>On the other hand, the development team was always in the loop from day 0; helping me to iron out any technical flaws and navigate through technical limitations as we made progress.</p>
+		<br>
+		<p>· · · ·</p>
+		<br>
+		<p>Special thanks to Sharon Rasheed, Shreyas and other members of the development team who contributed to this project. It was a great learning environment for everyone involved.</p>
+	</div>
+
+	<footer>
+		<div class="div-container">
+			<br><br><br>
+			<hr>
+			<br><br><br>
+		</div>
+
+		<div class="div-container">
+			<p class="next">Next</p>
+			<br>
+			<p><a href="visual.html">Visual Design Canvas</a></p>
+			<p><a href="custom-dimensions-clarisights.html">Redesigning Custom Dimensions at Clarisights</a></p>
+			<p style="color: #999999"><a href="mailto:suwardhan@gmail.com">Get in touch</a> → suwardhan@gmail.com</style></p>
+			<br>
+		</div>
+	</footer>
+	
+
+
+
+
+
+
+	
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
