@@ -5,13 +5,13 @@ html{
 body {
   font-family: 'Inter', sans-serif;
   text-align: center;
-  margin: 0 0 10rem 0;
+  margin: 0;
 }
 
 
 .div-tagline{
 	width: 80%;
-	padding: 10rem 0;
+	padding: 10% 0 16% 0;
 	margin: 0px auto;
 	text-align: left;
 }
@@ -20,11 +20,6 @@ body {
 	width: 60%;
 	margin: 0px auto;
 	text-align: left;
-}
-
-.header-links{
-	margin: 2rem 0;
-	text-align: right;
 }
 
 
@@ -119,13 +114,6 @@ hr{
 	"header-one header-two"
 }
 
-.project-gallery img{
-	width: 100%;
-	background-color: rgba(255,255,255,1);
-	border-radius: 0.5rem;
-}
-
-
 .header-one {
 	grid-area: header-one;
 }
@@ -133,16 +121,39 @@ hr{
 	grid-area: header-two;
 }
 
+
+ul li{
+	display: inline;
+}
+
+.header-list{
+	margin: 2rem 0;
+	text-align: right;
+}
+
+.header-link{
+	margin: 0 0 0 2rem;
+}
+
+.header-link a{
+	color: #999999;
+}
+
+.header-link a:hover{
+	color: #1a1a1a;
+}
+
+
 .project-gallery {
 	width: 80%;
 	margin: 0 auto;
 	display: grid;
 	grid-gap: 3rem;
 	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-areas: 
-	"pr-one pr-two"
-	"pr-three pr-four"
+	"pr-one pr-two pr-three"
+	"pr-four pr-five pr-six"
 }
 
 .project-gallery img{
@@ -164,6 +175,49 @@ hr{
 .pr-four {
 	grid-area: pr-four;
 }
+.pr-five {
+	grid-area: pr-five;
+}
+.pr-six {
+	grid-area: pr-six;
+}
+
+.project-gallery img{
+	width: 100%;
+	height: auto;
+	background-color: rgba(255,255,255,1);
+	border-radius: 0.5rem;
+}
+
+.div-footer {
+	width: 80%;
+	height: auto;
+	margin: 8rem auto 2rem auto;
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-areas: 
+	"footer-one"
+}
+
+.footer-one {
+	grid-area: footer-one;
+	text-align: left;
+}
+
+.copyright-text{
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	margin: 2rem 0;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	color: #999999;
+	text-align: left;
+}
+
+
+
 
 
 
