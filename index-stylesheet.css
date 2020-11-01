@@ -95,6 +95,10 @@ hr{
 	padding: 0 40% 0 0;
 }
 
+.div-nav-mobile{
+	display: none;
+}
+
 .project-tag{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -241,9 +245,13 @@ ul li{
 		"header-one header-two"
 	}
 	
+	.header-two{
+		display: none;
+	}
+
 	.div-tagline{
 		width: 90%;
-		padding: 20% 0 20% 0;
+		padding: 20% 0 0 0;
 		margin: 0px auto;
 		text-align: left;
 	}
@@ -257,6 +265,21 @@ ul li{
 		padding: 0;
 	}
 
+	.header-list{
+		margin: 2rem 0;
+		padding: 0 0 30% 0;
+		text-align: left;
+	}
+
+	.header-link{
+		margin: 0 2rem 0 0;
+	}
+
+	.div-nav-mobile{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
 
 	.project-gallery {
 		width: 90%;
