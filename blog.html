@@ -45,428 +45,109 @@
 
 	<!-- <button type="button" id="jump" class="jump-to">Jump to</button> -->
 
-	<img class="img-cover" style="cursor: default" src="images/recko/cover.svg">
+	<img class="img-cover" style="cursor: default" src="images/supermart/cover.jpg">
 
 	<div class="div-container">
 		<h1>Supermart - Flipkart Grocery</h1>
-		<p>Recko enables AI-powered reconciliation of digital transactions & keeps track of the complete transaction
-			lifecycle for organizations. Around Q2 of 2020, the company had few early B2B customers (Myntra, Lenskart,
-			Dunzo, Licious), and the product was growing in complexity. It was a good time for someone to come in and
-			standardise a few things to bring consistency across the product.</p>
-		<p>Parikshit (Recko Design lead) approached me in June about building a design system at Recko. They needed
-			someone to take ownership and lead the design process.</p>
-		<p>This sounded perfect for me, as I was playing around design systems for a couple of years then. But in
-			previous projects, building a design system was always a side thing that I did while working on other
-			product features. This time, it was my primary focus.</p>
-		<br>
-		<h3 id="tldr">TL;DR</h3>
-		<br>
+		<p>The study aims to understand <strong>users’ grocery buying processes</strong> and <strong>evaluate the usability aspects </strong> of the mobile app and desktop designs.</p>
+		<p>Team members: Tanmay (Designer) & Product managers</p>
+		<p>My role: User researcher</p>
+		
+		<h3>Project overview</h3>
+		<p>India is the sixth-largest grocery market globally and one of the fastest-growing markets for online groceries. Online grocery is expected to be one of the fastest gr­o­wing category reaching $5 billion in 2020 from $1 billion in 2017, as RedSeer Consulting reported, market research and advisory firm. The online groceries sector is a key battleground for online retailers because of the high order volumes and repeats purchases of groceries by customers.</p>
+		<p>Flipkart, India’s leading e-commerce marketplace, launched ‘ Flipkart Supermart’; its online grocery store for Bangalore customers, in 2017 on its mobile app and website. This category is gradually scaling in other cities across India as well.</p>
 
-		<ol>
+		<h3>Research overview</h3>
+		<p>Before devising the methodology and designing tasks, it was important for me to understand the Supermart category performance in Bangalore. I studied the metrics with a data analyst who gave me a walkthrough of the problems observed during the quantitative analysis. The analysis helped me decide the tasks and focus areas in the online grocery shopping journey.</p>
 
-			<li><strong><a href="#preparation">Preparation</a></strong><br>
-				<font style="color: #3D3D3D; font-weight: 300;"> Understanding Recko team culture, product vision and
-					other development practices.
-			</li>
-
-			<li><strong><a href="#foundation">DS foundation</a></strong><br>
-				<font style="color: #3D3D3D; font-weight: 300;"> Defining the foundational items of the Recko Design
-					system.
-			</li>
-
-
-			<li><strong><a href="#components">DS component library</a></strong><br>
-				<font style="color: #3D3D3D; font-weight: 300;"> Designing reusable UI components as a Figma library.
-			</li>
-
-			<li><strong><a href="#adoption">Adoption</a></strong><br>
-				<font style="color: #3D3D3D; font-weight: 300;"> Making efforts to invoke a sense of trust about the DS
-					in design and dev team to improve adoption.
-			</li>
-
-		</ol>
-
-		<br><br>
-		<h2 id="preparation">1. Preparation</h2>
-		<p>First 2–3 weeks, it was all about conversations. When I started, Recko was a small company with less than 50
-			people. I didn't know many of the team members; wasn't aware of the team culture, product vision and other
-			development practices that the team followed.</p>
-		<p>I made it my primary task to understand these aspects of Recko before moving on to the next step. Discussions
-			with Saurya (CEO) and Prashant (CTO) gave me a sense of their vision for the company. On top of this, inputs
-			from the product, marketing and sales teams helped me get alignment on Recko's personality in the outside
-			world.</p>
-		<p>We then went on to define the <strong>Recko Design Principles.</strong> The principles aimed to enable
-			conversations, guide the thought process and help reach solutions to product problems. These principles
-			became the core of how we built experiences at Recko.</p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/ReckoDesignPrinciples.png">
-
-	<div class="div-container">
-		<p class="image-caption">Recko Design Principles</p>
-		<p>We will detail out the principles in a separate post.</p>
-		<p class="quote">In some cases, teams start the design system without design principles, which may work too. But
-			it really helps to have principles as a north star while building the design system.</p>
-		<br>
-		<h3>UI audit</h3>
-		<p>In parallel with the principles, I started the process to audit the then existing product interface.</p>
-		<p>This exercise allows getting a bird's eye view of the product on a component level and can be used later to
-			prioritise component creation. This also serves as an archive during the later stages of the DS building
-			process.</p>
-	</div>
-
-
-	<img class="img-compact" style="cursor: none;" src="images/recko/UIAudit.png">
-
-	<div class="div-container">
-		<p class="image-caption">UI audit (blurred)</p>
-		<br>
-		<p>Here are the items documented in the audit:</p>
+		<h3>Research objectives</h3>
 		<ul>
-			<li>Compilation of every single UI element and its variations.</li>
-			<li>Page layout grids used in the product. e.g. pages using full width, pages with centre-aligned content,
-				pages with sidebars, modals etc.</li>
-			<li>Typefaces used and their purpose.</li>
-			<li>Iconography</li>
-			<li>Colour palette (different hex codes) used across the product.</li>
+			<li>To gain an understanding of users’ grocery ordering process.</li>
+			<li>Evaluate and gather insights around the usability of different touchpoints in the shopping journey:</li>
 		</ul>
-		<br><br>
-		<h3>Finalising the stack</h3>
-		<p>The team decided to use Figma for Recko Design system. Managing styles and components is a breeze on Figma,
-			and we had no second thoughts about going ahead with the tool.</p>
-		<p>For documentation, I had gotten used to and hence preferred Notion, so did most of the other members in the
-			design team. But rest of the org was on Google docs. So we went ahead with Google docs.</p>
-		<p class="quote">As it turns out later in the building process, we learned that the dev team was more
-			comfortable in Figma handoffs; and we eventually started documenting everything (components, behaviour, edge
-			cases etc.) in Figma itself.</p>
 	</div>
 
-	<img data-enlargeable class="img-compact" src="images/recko/Documentation.png">
+	<img class="img-compact" src="images/placeholder.svg">
 
 	<div class="div-container">
-		<p class="image-caption">First few weeks of documentation in Google docs</p>
-		<br><br>
-		<h2 id="foundation">2. DS Foundation</h2>
-		<p>Till this point, all I did was wrap my head around what Recko did and set some basic guidelines for the
-			things to come. In the next few weeks, we defined the foundational items of the Recko Design system.</p>
-		<p>I go by the following order while defining the foundational items of a design system:</p>
-
+		<ul>
+			<li>Gather an understanding of users’ comprehension, perceptions, and preferences while interacting with Flipkart grocery.</li>
+		</ul>
+		<h3>Methodology</h3>
+		<p>After finalizing on research objectives, an end-to-end usability evaluation of the online grocery experience was decided with 12 participants (8 mobile app users and 4 desktop users) which comprised of :</p>
+		<ul>
+			<li>Interview sessions with each participant (60–90 minutes), which included: a short briefing, a pre-shopping interview, and a think-aloud task* on a test phone/laptop.</li>
+			<li>A 10–15 minutes telephonic interview on post-order experience was conducted after the participant received the order.</li>
+		</ul>
+		<p>Task: Users were asked to buy bi-weekly/monthly groceries for themselves from Flipkart. Users went through the entire flow: Search or browse → a selection of items → order → payment → order confirmation. A gift voucher worth 1500 INR was provided to order items on the supermart platform.</p>
+		<h3>Participant recruitment</h3>
+		<p>Our participants were recruited from 2 cohorts: </p>
 		<ol>
-			<li>Spacing scale</li>
-			<li>Layout and column grid</li>
-			<li>Type scale</li>
-			<li>Color</li>
-			<li>Icon library</li>
+			<li>Flipkart regular grocery shoppers</li>
+			<li>Other app grocery shoppers — Amazon, Big Basket, Grofers.</li>
 		</ol>
+		<p>These participants were recruited with the help of an agency. A recruiting screener was shared with the vendor agency, who can get a list of potential participants, sift through the responses, schedule appropriate participants, and manage their compensation for us.</p>
 	</div>
 
-	<img data-enlargeable class="img-center" src="images/recko/DSChronology.png">
-
-	<div class="div-container">
-		<p>The above order ensures that we don't have structural debt while defining a particular item. e.g. If there is
-			no concrete definition of spacing scale, it becomes tricky to define the layout grid.</p>
-		<p>Even though the above order is ideal, but in the real world, there will always be tight deadlines to follow
-			and seldom will you get the luxury of time to define each item exhaustively.</p>
-		<p class="quote">So it is usually a good practice to define the bare minimums for each step so that it doesn't
-			block the next one and try to refine later; allowing you to keep things moving.</p>
-		<br>
-		<h3>1. Spacing scale</h3>
-		<p>We (design and front end team) decided to use 4px as a base unit for all our measurements in layouts and UI
-			elements across the platform.</p>
-		<p>This means a 4px incremental scale for:
-			<br>
-			- margins and paddings in the UI elements
-			<br>
-			- sizes for all components</p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/SpacingScale.png">
-
-	<div class="div-container">
-		<p>We made sure to involve the front end team while finalising the base unit. The cherry on top would be if the
-			front end team creates classes based on frequently used spaces (e.g. classes tiny, small, medium for 4px,
-			8px and 12px respectively and so on).</p>
-		<p>This also ensures that the dev team talks in classes instead of pixels, bringing quicker adoption and fewer
-			chances of errors.</p>
-		<br>
-		<h3>2. Layout and column Grid</h3>
-		<p>Recko DS was being developed for desktop first. To streamline the process, I usually follow these steps to
-			narrow down on the layout and column grid for a particular page in the app.</p>
-
-		<ol>
-			<li>Identify different page elements and layouts</li>
-			<li>Choose an n column grid</li>
-			<li>Define column grid margins and gutter</li>
-			<li>For each page, identify the page elements and define the best possible grid behaviour</li>
-		</ol>
-
-		<br>
-		<p><strong>2.1. Identify different page elements and layouts</strong><br>
-			Using UI audit document, we identified and categorised different page elements and layouts used in the app.
-			Here are a few examples of page elements and page layouts.</p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/Layout.png">
-
-	<div class="div-container">
-		<p class="image-caption">Examples of different page elements and layouts</p>
-		<br>
-		<p><strong>2.2. Choose an n column grid</strong><br>We decided to use the 12 column grid for the content-area
-			(canvas) of the app.</p>
-		<p>Reason being 12 columns grid is easily divisible by 3, 4 and 6; conveniently dividing the content-area into
-			4, 3 or 2 columns respectively. Also, the design and dev team were well versed with the 12 column grid. So
-			that helped too.</p>
-		<p>In this scenario, the sidebar (if any) remains fixed width, and the remaining area can be taken up by the
-			content-area (12 column grid).</p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/TwelvecolumnGrid.png">
-
-	<div class="div-container">
-		<p class="image-caption">12 column grid for content-area</p>
-		<p>Other option can be having a percentage based layout - wherein the entire page is divided in percentages.
-			e.g. 20–80 percentage scale for sidebar and content-area.</p>
-		<p>I prefer the former option, as it gives more control handling the content-area items; but I have seen teams
-			successfully use percentage-based grids in the past.</p>
-		<br>
-		<p><strong>2.3. Define column grid margins and gutter</strong><br>Grid margin is the spaces on the left and
-			right edge of the content-area grid. Gutter space is the space between 2 adjacent columns in the column
-			grid.</p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/MarginAndGutter.png">
+	<img class="img-compact" src="images/placeholder.svg">
 
 	<br>
-	<div class="div-container">
-		<p>Ideally, we try to keep the values for both grid margin and gutter constant across the app. e.g. In case of
-			content-area with sidebar, even though the available area shrinks in width, the reduction in width should
-			reflect in individual column width, not in grid margin or gutter space.</p>
-		<p>Also, grid margin is applicable only when the entire available width is used to display content. If the
-			content is centre aligned with some max-width, the margin is set automatically.</p>
-		<br>
-		<p><strong>2.4 For each page, identify the page elements and define the best possible grid
-				behaviour</strong><br>Once global attributes were set, we started to scan each page to identify the
-			repeating page elements and define the content-area grid behaviour.</p>
-		<p>E.g. content-area in some pages will be centre-aligned (in forms for more focus) vs in some pages
-			content-area will be spread in the entire available space (in dashboards for more visibility).</p>
-	</div>
 
-	<img data-enlargeable class="img-compact" src="images/recko/GridBehaviour.png">
-
-	<div class="div-container">
-		<p class="image-caption">Grid behaviour based on context</p>
-		<p>This step is context driven, and the grid behaviour for each page may vary based on product context.</p>
-		<br>
-		<h3>3. Type scale</h3>
-		<p>In this step of DS foundation, we covered the following items:</p>
-
-		<ol>
-			<li>Choosing typefaces to be used across the app</li>
-			<li>Defining a type-scale for each typeface</li>
-		</ol>
-
-		<p>One thing to note before moving to typeface shopping - we had decided to follow a line-height based grid (vs
-			baseline grid). Reason being it is easier to manage in Figma and has a better CSS support than baseline.</p>
-		<p><a target="blank" href="https://bit.ly/2GtQIvH">Read more here</a> ↗</p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/LineheightVBaseline.png">
+	<img class="img-compact" src="images/placeholder.svg">
 
 
 	<div class="div-container">
-		<p>For a given typeface, each font-size is tightly coupled with its line-height. But we chose to have variations
-			in font-weight for each size to improve flexibility.</p>
-		<p class="quote">In my experience, teams are less aware of this coupling of font-size and line-height. Since all
-			UI specs revolve around the line-height, it becomes vital to ensure that they understand this relationship
-			and practice it.</p>
-		<br>
-		<p><strong>3.1 Choosing typefaces</strong><br>To begin, the UI audit document became a good reference to narrow
-			down on the typefaces and their respective font-sizes. Graphik was used as a primary typeface across the
-			app.</p>
-		<p>As it turned out, line-height was not thought out while implementing the typeface in the designs, and this
-			was causing an issue. Graphik is a beautiful typeface, but while implementing it in UI elements, it did not
-			align well vertically. It felt a little <i>bottom-shifted.</i></p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/Graphik.png">
-
-	<div class="div-container">
-		<p>This seemed like a small issue until we tested it with Figma auto-layout for creating the component library.
-			In July 2020, Figma did not support variable padding vertically, and the components looked something like
-			this:</p>
-	</div>
-
-	<img data-enlargeable class="img-compact" src="images/recko/GraphikAutoLayout.png">
-
-
-	<div class="div-container">
-		<p>At the time of writing this, Figma still did not support variable padding vertically. We tried a couple of
-			workarounds, but it felt like a compromise. Hence we decided to update the typeface - something close to
-			what we had, but one which could solve the issue.</p>
-		<p>Choosing a new typeface involves many considerations and simultaneously trying to answer the following
-			questions:</p>
-
+		<h3>Data analysis</h3>
+		<p>I started the analysis in the following steps:</p>
 		<ul>
-			<li>Does the typeface appropriately reflect the brand's identity?</li>
-			<li>Will a single typeface suffice for both product and marketing content?</li>
-			<li>How will a typeface affect product performance?</li>
+			<li>After each session, I scheduled <strong>debriefing sessions</strong> with the designers and product managers. Each member has to share their notes with the group of what they observed in the sessions.</li>
+			<li>Next, I watched the <strong>session recordings</strong> and went through the transcripts based on the interview protocol to make notes of whatever we missed in our debriefing discussions.</li>
+			<li>Finally, I examined the notes to <strong>find patterns and coded them</strong>. I divided the whole shopping journey into three phases: Basket building, Ordering, and post order. Using the clusters, insights were generated in the shopping journey, and opportunities were created.</li>
 		</ul>
-
-		<br>
-		<p>Answer to these questions varies depending on the type of the company and the target scope of the design
-			system.</p>
-		<p>On experimenting with various options, we decided to use Inter as a primary typeface across the app. It is
-			close to the earlier typeface, thus not giving a visual jerk reaction to the end-user. It has enough weight
-			variations to choose from and loading times are quick too; and most importantly, it solved the vertical
-			alignment issue.</p>
+		<p>I included supporting video clips and quotations while assembling the report.</p>
 	</div>
 
-	<img data-enlargeable class="img-compact" src="images/recko/GraphikvInter.png">
+	<img class="img-compact" src="images/placeholder.svg">
 
 	<div class="div-container">
-		<p><strong>3.2 Defining a type-scale</strong><br>Reducing the number of font-sizes to be used across the system
-			improves consistency, but can be limiting as well. This was our purpose of defining a type-scale: to define
-			a set of font-sizes and respective weights to be used in the design system.</p>
-		<p class="quote">The aim was to keep a balance between limiting the number of sizes, but also gifting
-			flexibility to designers by allowing variations in weights.</p>
+		<h3>Insights and opportunities</h3>
 	</div>
 
-	<img data-enlargeable class="img-compact" src="images/recko/TypeScale.png">
+	<img class="img-compact" src="images/placeholder.svg">
 
 	<div class="div-container">
-		<p>As mentioned earlier, each font-size is tightly coupled with line-height; and the line-height follows a 4px
-			scale we defined in the first step.</p>
-		<p>For defining variations in font-weights, I usually follow a simple rule. The farther away the font-size is
-			from the base size, lower the number of variations in font-weight.</p>
-		<p>e.g. Base size has the most number of variations for flexibility, and bigger font-sizes (usually headings)
-			will have not more than one font-weight for consistency.</p>
-		<p>Note: We did not define the styles, but only the scale. Designers were given the freedom to play around with
-			text content based on context while creating a particular component.</p>
-		<br>
-		<h3>4. Colors</h3>
-		<p>Building a color palette for a design system is a lengthy exercise, involving collaboration from multiple
-			departments - graphic design, marketing, development and business teams. Also, it entails considering
-			numerous aspects like target devices, target audience, accessibility and so on.</p>
-		<p>But with stiff timelines, this step can become a bottleneck for creating the component library. So to avoid
-			slowing down the entire process, we followed the bare-minimum rule.</p>
-		<p>We figured bare minimum would include finalising hex codes (or HSL) for the following items:</p>
+		<h3>Impact</h3>
+		<p>Some of the insights with design changes (App and desktop):</p>
 	</div>
 
-	<img data-enlargeable class="img-compact" src="images/recko/Color.png">
+	<img class="img-compact" src="images/placeholder.svg">
+
+	<br>
+
+	<img class="img-compact" src="images/placeholder.svg">
+
+	<br>
+
+	<img class="img-compact" src="images/placeholder.svg">
 
 	<div class="div-container">
-		<p>These colors allowed us to get started on the component library. Primary color took care of all the enabled
-			or active states of the components. It was essential to freeze on a background colour as it can easily
-			change the mood of the entire page.</p>
-		<p>Defining the Gray scale meant we had fixed hexes for stroke, secondary text color and disabled states for the
-			component library.</p>
-		<p>We had the necessary foundation laid for the color palette, allowing us to move to the next step. Rest
-			palette was built in parallel as we made progress.</p>
-		<br>
-		<h3>5. Icon set</h3>
-		<p>Unlike other UI elements, icons have a unique way of conveying information to the user and are fundamental to
-			the design system. Icons are not as attention-seeking as illustrations but are capable of providing helpful
-			context in places of uncertainty.</p>
-		<p>Each brand should have its own icon-set, but it is also time-consuming to create one. This process of
-			creating an icon-set, like color palette, can run in parallel while building the component library.</p>
-		<p>But certain things about the icons can be finalised before-hand:</p>
-
-		<ul>
-			<li>Recommended dimensions (should follow spacing scale)</li>
-			<li>Filled vs outline icons and their usage</li>
-			<li>Rounded vs sharp edges and their usage</li>
-		</ul>
-
+		<h3>Business impact</h3>
+		<p>The recommendations led to design changes, feature concept changes, and contributed to the <strong>product roadmap </strong> providing opportunities for new features in the grocery category.</p>
+		<p>Flipkart further <strong>launched</strong> this grocery category ‘Supermart’ <strong>in 4 more cities </strong> across India (Hyderabad, Chennai, Delhi, Mumbai).</p>
+		<p>The design changes lead to an increase in total conversion by an ambitious 110bps.</p>
 	</div>
 
-	<img data-enlargeable class="img-compact" src="images/recko/Icons.png">
+	<img class="img-compact" src="images/placeholder.svg">
 
 	<div class="div-container">
-		<p>Once we got this finalised, we searched for an open-source icon library that matched our requirements and
-			used it till our icon-set was ready.</p>
-		<p>This was the last step in DS Foundation. We had laid enough groundwork to be able to start creating the
-			component library.</p>
-		<br>
-		<h2 id="components">3. DS Components</h2>
-		<p>Components, UI library or UI kit in the design system is a collection of reusable UI elements in the app
-			interface. The process of creating and documenting a set of components is well documented across the
-			internet and hence won't go into too much detail here.</p>
-		<p><a href="https://bit.ly/3jIf6rw" target="blank">Tutorial on YouTube</a> ↗</p>
-		<p>UI audit document helped us to narrow down and prioritise the order of individual component creation. The
-			guidelines set in the DS foundation enabled us to maintain consistency on a very granular level for each
-			component.</p>
-		<p>The whole effort to create, test and document the v1 of the entire library took us around 8–10 weeks.</p>
+		<h3>Following work</h3>
+		<p>Further, studies were conducted on the following domains: retention & membership, offers, recommendation, Supermart homepage.</p>
 	</div>
 
-	<img data-enlargeable class="img-compact" src="images/recko/Banners.png">
 
 
-	<div class="div-container">
-		<p class="image-caption">e.g. Banner message component</p>
-		<br>
-		<p>The front end team picked up the component development in parallel from the first week. Once the foundational
-			items were set in code, things started to pick up speed.</p>
-		<p class="quote">The upcoming product feature is entirely built on the new guidelines and UI library by the
-			front end team, and so far, the foundation feels pretty stable.</p>
-		<br>
-		<h2 id="adoption">4. Adoption</h2>
-		<p>To make the efforts worth, adoption of the design system guidelines and components by the design and dev team
-			is critical. I feel the way to ensure adoption is to invoke a sense of trust about the DS in both the design
-			and dev team.</p>
-		<p>The DS should give the designer enough flexibility so that they prefer not to detach that component or break
-			that particular spacing guideline. At the same time, in cases where the DS falls short, the designer takes
-			the onus to communicate and overcome the shortcoming in the next DS version.</p>
-		<p>All good developers take pride in writing clean code. There is always a hint of hesitation to override a
-			class to handle edge cases or to accommodate deviations in design files; as it can come back to haunt them
-			later.</p>
-		<p>Suppose the DS guidelines are appropriately set, with consideration of all use cases, and the design team is
-			following the DS in their handoffs. In that case, there is no reason for the failure of adoption in the dev
-			team.</p>
-		<p>To ensure this, I tend to practice the following things while building a DS:</p>
-	</div>
-
-	<img data-enlargeable class="img-center" src="images/recko/Adoption.png">
 
 
-	<div class="div-container">
-		<p><strong>Communicate regularly</strong><br>In the initial days, we used to have daily sync ups to discuss
-			progress on the design system. Even if we documented something, we ensured verbal communication across the
-			team. Once the necessary groundwork was laid, the sync ups were toned down to alternate days or twice a
-			week.</p>
-		<br>
-		<p><strong>Keep it inclusive</strong><br>Communicating regularly made sure we included members of both the
-			design and dev team in the discussions. Each brought with them particular expertise or product context.
-			Also, people hate when you expect them to follow guidelines without being consulted.</p>
-		<br>
-		<p><strong>Provide quick support</strong><br>Having a dedicated person to provide quick support in cases of
-			confusion or shortcomings was vital. Also, a dedicated slack channel became a common discussion place for
-			everything DS.</p>
-		<br>
-		<p><strong>DS QA before the handoff</strong><br>A quick design system QA before any design handoff helped to
-			identify and fill the gaps between DS and design implementation (if any).</p>
-		<br>
-		<p><strong>Keep a changelog</strong><br>A changelog is a timeline view of updates happening to the design
-			system. It helped improve visibility, monitor progress and gave a sense of momentum to the whole DS building
-			process.</p>
-		<br><br>
-		<p style="text-align: center;">• • • •</p>
-		<br>
-		<p>With the critical foundation laid and tested, in coming months, the team plans to work on other aspects of
-			the design system - motion, illustrations, content tone, etc. With more diverse people collaborating, it
-			will be exciting to see what the team comes up with.</p>
-		<p>Special mention to <a href="https://www.linkedin.com/in/parikshitd/">Parikshit</a>, <a
-				href="https://www.linkedin.com/in/rohit-kumar-1018/">Rohit</a> and <a
-				href="https://www.linkedin.com/in/ankeetkavaiya/">Ankeet</a> from the design team, and <a
-				href="https://www.linkedin.com/in/rishabh-bindal-ab845a83/">Rishabh</a>, <a
-				href="https://www.linkedin.com/in/rabinath-jha-9b23a574/">Rabinath</a>, <a
-				href="https://www.linkedin.com/in/vikasraok/">Vikas</a> and <a href="">Abhishek</a> from the dev team
-			who worked closely with me on this. Incredibly proud that the team was able to successfully carry out the
-			entire project till now working from home.</p>
-		<br>
-		<p style="color: #999999"><a href="mailto:suwardhan@gmail.com">Get in touch</a> → suwardhan@gmail.com</p>
-	</div>
-
-	<img class="img-center" style="cursor: default" src="images/recko/Team.jpg">
 
 	<footer>
 		<div class="div-container">
@@ -484,65 +165,6 @@
 			<br>
 		</div>
 	</footer>
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-	<script>
-		$('img[data-enlargeable]').addClass('img-enlargeable').click(function () {
-			var src = $(this).attr('src');
-			var modal;
-			function removeModal() { modal.remove(); $('body').off('keyup.modal-close'); }
-
-			modal = $('<div>').addClass('modal-overlay')
-				.click(function () {
-					removeModal();
-				})
-				.appendTo('body');
-
-			var imageModal = $('<div>').addClass('img-modal').css({
-				backgroundImage: 'url(' + src + ')',
-			})
-				.appendTo(modal);
-
-			//handling ESC
-			$('body').on('keyup.modal-close', function (e) {
-				if (e.key === 'Escape') { removeModal(); }
-			});
-		});
-	</script>
-
-
-
-
-
-	<!-- <script type="text/javascript">
-		const jump = document.querySelector('#jump')
-		const remove = (event) => {
-			const el = event.composedPath().find(element => /^H[1-6]/.test(element.tagName))
-			if (el) {
-				document.body.classList.remove('headings-mode');
-				document.body.classList.remove('done');
-				document.removeEventListener('click', remove)
-				window.location.hash = el.getAttribute('id')
-			}
-		}
-
-		// document.addEventListener('click', (event) => {
-		// 	const el = event.composedPath().find(element => 'IMG' === (element.tagName))
-		// 	if (el) {
-		// 		el.requestFullscreen()
-		// 	}
-		// })
-
-		jump.addEventListener('click', () => {
-			document.body.classList.toggle('headings-mode');
-
-			setTimeout(() => {
-				document.addEventListener('click', remove)
-			}, 150)
-		})
-	</script> -->
 
 </body>
 

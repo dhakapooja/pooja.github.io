@@ -38,6 +38,7 @@ h3 {
 	font-size: 1.5rem;
 	line-height: 2rem;
 	margin-bottom: -1.25rem;
+	margin-top: 4rem;
 	font-family: 'Inter', sans-serif;
 	font-weight: 600;
 	color: #333333;
@@ -135,14 +136,13 @@ hr{
 	width: 80%;
 	height: auto;
 	border-radius: 0.5rem;
-	height: 27vw; 
 	background-color: #ffffff;
 }
 
 .top-nav{
 	margin: 0;
 	position: fixed;
-	background-color: #000000;
+	background-color: rgba(0,0,0,.05);
 	width: 42px;
 	height: 42px;
 	top: 8px;
