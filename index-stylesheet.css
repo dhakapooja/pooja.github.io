@@ -11,7 +11,7 @@ body {
 
 .div-tagline{
 	width: 80%;
-	padding: 10% 0 16% 0;
+	padding: 10% 0 10% 0;
 	margin: 0px auto;
 	text-align: left;
 }
@@ -37,11 +37,11 @@ h2 {
 }
 
 h3 {
-	font-size: 1.5rem;
-	margin-bottom: -.75rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	font-family: 'Public Sans', sans-serif;
-	font-weight: 700;
-	color: #333333;
+	font-weight: 400;
+	color: #6D5F5F;
 }
 
 h4 {
@@ -149,6 +149,12 @@ ul li{
 
 .header-link a:hover{
 	color: #1a1a1a;
+}
+
+.div-project-heading{
+	width: 80%;
+	margin: 0 auto 2.5rem auto;
+	text-align: left;
 }
 
 
