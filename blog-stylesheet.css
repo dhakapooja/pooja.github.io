@@ -12,7 +12,7 @@ body {
 }
 
 .div-container{
-	width: 48%;
+	width: 56%;
 	margin: 0px auto;
 	text-align: left;
 }
@@ -412,15 +412,3 @@ hr{
 		height: calc(100vh - 16px);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
