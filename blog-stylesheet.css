@@ -191,6 +191,10 @@ hr{
 	width: auto;
 }
 
+.italic-text{
+	font-style: italic;
+}
+
 
 .top-nav{
 	margin: 0;
