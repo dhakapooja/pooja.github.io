@@ -114,7 +114,7 @@ strong{
 
 img{
 	margin: 2rem 0;
-	cursor: zoom-in;
+	/* cursor: zoom-in; */
 }
 
 code{
@@ -167,21 +167,27 @@ hr{
 	display: grid;
 	grid-gap: 3rem;
 	grid-template-rows: repeat(1, 1fr);
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	grid-template-areas: 
-	"insights-one insights-two insights-two insights-two insights-two"
+	"insights-one insights-two insights-two insights-two insights-two insights-two"
 }
 
 .insights-one {
 	grid-area: insights-one;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .insights-two { 
 	grid-area: insights-two;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .insights-one img{
-	height: 5rem;
+	height: 4rem;
 	width: auto;
 }
 
