@@ -289,12 +289,16 @@ ul li{
 		margin: 0 auto;
 	}
 
+	.div-project-heading{
+		display: none;
+	}
+
 	.project-gallery {
 		width: 90%;
 		margin: 0 auto;
 		display: grid;
 		grid-gap: 3rem;
-		grid-template-rows: repeat(5, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-areas: 
 		"pr-one"
